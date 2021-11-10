@@ -1,0 +1,28 @@
+$button-colors: #941c22;
+$color-white: #fff;
+$color-background: #f5f5f5;
+.Form {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  &_field {
+    margin: auto;
+    width: 60%;
+    &_input {
+      display: block;
+      background: $color-background;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      border: 1px solid $button-colors;
+      margin-bottom: 1rem;
+      width: 100%;
+      outline: none;
+    }
+  }
+  &_button {
+    background: $button-colors;
+    color: #fff;
+    display: block;
+    margin: auto;
+  }
+}

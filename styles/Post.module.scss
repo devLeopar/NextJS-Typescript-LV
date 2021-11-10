@@ -1,0 +1,25 @@
+.Card {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &_body {
+    width: 60%;
+    &_text {
+      color: #999;
+    }
+    &_title {
+      font-size:1.25em;
+      text-align:left;
+    }
+  }
+
+  &_button {
+    background: #fff;
+    border: 1px solid #920dbb;
+    color: #920dbb;
+  }
+}
