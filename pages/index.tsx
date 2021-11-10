@@ -3,6 +3,7 @@ import { InferGetStaticPropsType } from 'next'
 import AddPost from '../components/AddPost'
 import Post from '../components/Post'
 import { IPost } from '../types'
+import Head from 'next/head'
 
 const BASE_URL: string = 'http://localhost:3000/api/posts'
 
@@ -29,13 +30,19 @@ export default function IndexPage({
   if (!postList) return <h1>Loading...</h1>
 
   return (
-    <main className='container'>
-      <h1>List Of The Posts</h1>
-      <AddPost savePost={addPost} />
-      {postList.map((post: IPost) => (
-        <Post key={post.id} deletePost={deletePost} post={post} />
-      ))}
-    </main>
+    <>
+      <Head>
+        <title>My Posts App</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <main className='container'>
+        <h1>List Of The Posts</h1>
+        <AddPost savePost={addPost} />
+        {postList.map((post: IPost) => (
+          <Post key={post.id} deletePost={deletePost} post={post} />
+        ))}
+      </main>
+    </>
   )
 }
 
